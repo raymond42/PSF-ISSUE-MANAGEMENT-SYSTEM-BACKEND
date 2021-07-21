@@ -1,0 +1,44 @@
+{
+  "name": "psf-issue-management-system-backend",
+  "version": "1.0.0",
+  "description": "PSF ISSUE MANAGEMENT SYSTEM is a platform where registered member can create an issue and assign it to the appropriate PSF membership staff. The PSF membership staff should see all the issues assigned to him/her. The system admin should be able to see all the issues created in the system.",
+  "main": "index.js",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "pg": "^8.6.0",
+    "sequelize": "^6.6.5",
+    "sequelize-cli": "^6.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.14.8",
+    "@babel/node": "^7.14.7",
+    "@babel/plugin-transform-runtime": "^7.14.5",
+    "@babel/preset-env": "^7.14.8",
+    "@babel/register": "^7.14.5",
+    "@babel/runtime": "^7.14.8",
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.12"
+  },
+  "scripts": {
+    "dev": "nodemon --exec babel-node ./src/server.js",
+    "build": "rm -rf build && babel -d ./build ./src -s",
+    "start": "npm run build && npm run migrate && npm run seed && node ./build/index.js",
+    "migrate": "node_modules/.bin/sequelize db:migrate",
+    "seed": "node_modules/.bin/sequelize db:seed:all",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raymond42/PSF-ISSUE-MANAGEMENT-SYSTEM-BACKEND.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raymond42/PSF-ISSUE-MANAGEMENT-SYSTEM-BACKEND/issues"
+  },
+  "homepage": "https://github.com/raymond42/PSF-ISSUE-MANAGEMENT-SYSTEM-BACKEND#readme"
+}

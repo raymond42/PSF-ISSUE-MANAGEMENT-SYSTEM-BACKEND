@@ -1,0 +1,1 @@
+PSF ISSUE MANAGEMENT SYSTEM is a platform where registered member can create an issue and assign it to the appropriate PSF membership staff. The PSF membership staff should see all the issues assigned to him/her. The system admin should be able to see all the issues created in the system.
