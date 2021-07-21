@@ -7,7 +7,7 @@ import db from './sequelize/models';
 
 const app = express();
 
-const PORT = process.env.PORT || 2000;
+const PORT = process.env.PORT || 3500;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
